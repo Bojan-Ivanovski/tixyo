@@ -1,0 +1,53 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "tixyo"
+version = "0.1.0"
+description = "Confidence-gated, model-assisted issue triage for engineering teams"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.11"
+dependencies = ["decider-ai==1.5.0", "typer", "requests"]
+keywords = ["github", "issue-triage", "classification", "automation", "decider"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.11",
+    "Topic :: Software Development :: Bug Tracking",
+]
+
+[project.urls]
+Homepage = "https://github.com/Bojan-Ivanovski/tixyo"
+Repository = "https://github.com/Bojan-Ivanovski/tixyo"
+Issues = "https://github.com/Bojan-Ivanovski/tixyo/issues"
+
+[project.scripts]
+tixyo = "tixyo.cli:main"
+
+[project.optional-dependencies]
+dev = ["tox", "black", "isort", "pyright"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["tixyo*"]
+
+[tool.setuptools.package-data]
+tbt_engine = ["py.typed"]
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.isort]
+profile = "black"
+line_length = 100
+
+[tool.pyright]
+include = ["tixyo"]
+typeCheckingMode = "strict"
+reportMissingTypeStubs = false

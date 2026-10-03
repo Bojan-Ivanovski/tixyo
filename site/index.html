@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="theme-color" content="#f4f1e9" />
+    <meta
+      name="description"
+      content="Tixyo is an open-source AI GitHub issue triage CLI that classifies, prioritizes, sizes, and routes issues with confidence-gated automation."
+    />
+    <meta name="robots" content="index, follow, max-image-preview:large" />
+    <link rel="canonical" href="https://tixyo.dev/" />
+    <meta property="og:site_name" content="Tixyo" />
+    <meta property="og:title" content="Tixyo — AI GitHub Issue Triage CLI" />
+    <meta
+      property="og:description"
+      content="Classify, prioritize, size, and route GitHub issues with confidence-gated AI automation. Open source and safe by default."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://tixyo.dev/" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Tixyo — AI GitHub Issue Triage CLI" />
+    <meta
+      name="twitter:description"
+      content="Confidence-gated, AI-assisted GitHub issue triage for engineering teams."
+    />
+    <title>Tixyo: AI GitHub Issue Triage CLI</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700&family=Syne:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./styles.css" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "SoftwareApplication",
+        "name": "Tixyo",
+        "url": "https://tixyo.dev/",
+        "downloadUrl": "https://pypi.org/project/tixyo/",
+        "codeRepository": "https://github.com/Bojan-Ivanovski/tixyo",
+        "applicationCategory": "DeveloperApplication",
+        "applicationSubCategory": "Issue tracking and developer tools",
+        "operatingSystem": "Linux, macOS, Windows",
+        "softwareVersion": "0.1.0",
+        "programmingLanguage": "Python",
+        "description": "Open-source AI GitHub issue triage CLI with confidence-gated classification, prioritization, sizing, routing, and risk detection.",
+        "license": "https://opensource.org/license/mit",
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD"
+        },
+        "author": {
+          "@type": "Person",
+          "name": "Bojan Ivanovski",
+          "url": "https://github.com/Bojan-Ivanovski"
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div class="grain" aria-hidden="true"></div>
+    <header class="site-header">
+      <a class="brand" href="#top" aria-label="Tixyo home">
+        <span class="brand-mark" aria-hidden="true">T</span>
+        <span>Tixyo</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#workflow">Workflow</a>
+        <a href="#safety">Safety</a>
+        <a href="#taxonomy">Taxonomy</a>
+      </nav>
+      <a class="header-link" href="https://github.com/Bojan-Ivanovski/tixyo">View on GitHub <span>↗</span></a>
+    </header>
+    <nav class="mobile-nav" aria-label="Mobile navigation">
+      <a href="#workflow">Workflow</a>
+      <a href="#safety">Safety</a>
+      <a href="#taxonomy">Taxonomy</a>
+      <a href="#install">Install</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+
+    <main id="top">
+      <section class="hero section-shell">
+        <div class="hero-copy">
+          <div class="eyebrow"><span></span> Open-source issue intelligence</div>
+          <h1>Put issue triage <em>on rails.</em></h1>
+          <p class="hero-lede">
+            Tixyo is an open-source AI GitHub issue triage CLI. It turns noisy issues into
+            structured, reviewable decisions—classifying, prioritizing, sizing, routing, and
+            flagging risk while confidence decides what moves.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#install">Start triaging <span>→</span></a>
+            <a class="button button-secondary" href="https://github.com/Bojan-Ivanovski/tixyo">Explore the source</a>
+          </div>
+          <div class="trust-line">
+            <span>Dry-run by default</span><span>GitHub native</span><span>Python 3.11+</span>
+          </div>
+        </div>
+
+        <div class="console-wrap" aria-label="Example Tixyo triage result">
+          <div class="orbit orbit-one"></div>
+          <div class="orbit orbit-two"></div>
+          <div class="console">
+            <div class="console-bar">
+              <div class="window-dots"><i></i><i></i><i></i></div>
+              <span>tixyo / triage</span>
+              <span class="live-dot">model ready</span>
+            </div>
+            <div class="console-command"><span>$</span> tixyo triage 482</div>
+            <div class="issue-card">
+              <div class="issue-meta"><span>#482</span><span>opened 8m ago</span></div>
+              <h2>Build cache intermittently misses on arm64 runners</h2>
+              <div class="issue-tags"><span>CI</span><span>arm64</span><span>regression</span></div>
+            </div>
+            <div class="decision-list">
+              <div class="decision-row">
+                <span class="decision-icon blue">T</span>
+                <span class="decision-name">Type</span>
+                <strong>Bug</strong>
+                <span class="confidence">96%</span>
+              </div>
+              <div class="decision-row">
+                <span class="decision-icon yellow">C</span>
+                <span class="decision-name">Components</span>
+                <strong>Build · CI</strong>
+                <span class="confidence">91%</span>
+              </div>
+              <div class="decision-row">
+                <span class="decision-icon coral">P</span>
+                <span class="decision-name">Priority</span>
+                <strong>High</strong>
+                <span class="confidence">88%</span>
+              </div>
+              <div class="decision-row muted">
+                <span class="decision-icon gray">A</span>
+                <span class="decision-name">Assignee</span>
+                <strong>Needs review</strong>
+                <span class="confidence low">52%</span>
+              </div>
+            </div>
+            <div class="console-footer">
+              <span><i></i> 3 decisions ready</span>
+              <span>dry run — nothing changed</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="marquee" aria-label="Tixyo capabilities">
+        <div class="marquee-track">
+          <span>Classify</span><b>✦</b><span>Prioritize</span><b>✦</b><span>Route</span><b>✦</b><span>De-risk</span><b>✦</b>
+          <span>Classify</span><b>✦</b><span>Prioritize</span><b>✦</b><span>Route</span><b>✦</b><span>De-risk</span><b>✦</b>
+        </div>
+      </section>
+
+      <section class="workflow section-shell" id="workflow">
+        <div class="section-heading">
+          <div class="eyebrow"><span></span> The workflow</div>
+          <h2>From issue opened<br />to decision ready.</h2>
+          <p>One command. A bounded context. A decision your team can inspect before it lands.</p>
+        </div>
+        <div class="steps">
+          <article class="step-card">
+            <span class="step-number">01</span>
+            <div class="step-visual inbox-visual">
+              <span class="mini-avatar">GH</span>
+              <div><b>Issue + discussion</b><small>Body and recent comments</small></div>
+              <span class="arrow">→</span>
+            </div>
+            <h3>Read the whole signal</h3>
+            <p>Tixyo gathers the issue body and recent discussion into a focused context window.</p>
+          </article>
+          <article class="step-card featured">
+            <span class="step-number">02</span>
+            <div class="step-visual score-visual">
+              <div class="score-ring"><span>94<small>%</small></span></div>
+              <div><b>Confidence gate</b><small>Threshold: 85%</small></div>
+            </div>
+            <h3>Measure, don’t guess</h3>
+            <p>Every recommendation carries a probability. Uncertain decisions remain human decisions.</p>
+          </article>
+          <article class="step-card">
+            <span class="step-number">03</span>
+            <div class="step-visual apply-visual">
+              <div class="apply-line"><span>Type: Bug</span><i>ready</i></div>
+              <div class="apply-line"><span>Owner: Platform</span><i>review</i></div>
+            </div>
+            <h3>Preview, then apply</h3>
+            <p>Dry-run is the default. Explicitly apply only the changes that pass your policy.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="safety" id="safety">
+        <div class="section-shell safety-grid">
+          <div class="safety-copy">
+            <div class="eyebrow light"><span></span> Automation with judgment</div>
+            <h2>Fast where it’s safe.<br /><em>Quiet where it isn’t.</em></h2>
+            <p>
+              Tixyo separates a model recommendation from permission to mutate your repository.
+              Security-sensitive signals stop normal routing, and low-confidence choices wait for a human.
+            </p>
+            <a href="https://github.com/Bojan-Ivanovski/tixyo#safety-model">Read the safety model <span>→</span></a>
+          </div>
+          <div class="policy-card">
+            <div class="policy-top"><span>policy.run</span><span class="policy-status">evaluating</span></div>
+            <div class="policy-body">
+              <div class="policy-row"><span>Type: Bug</span><b>0.96</b><i class="pass">pass</i></div>
+              <div class="policy-row"><span>Priority: High</span><b>0.88</b><i class="pass">pass</i></div>
+              <div class="policy-row"><span>Owner: Platform</span><b>0.52</b><i class="hold">hold</i></div>
+              <div class="policy-rule"><span>if</span> probability ≥ threshold <span>then</span> eligible</div>
+              <div class="policy-result"><span class="shield">✓</span><div><b>Safe to preview</b><small>No repository changes made</small></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="taxonomy section-shell" id="taxonomy">
+        <div class="taxonomy-copy">
+          <div class="eyebrow"><span></span> One shared language</div>
+          <h2>Your taxonomy,<br /><span class="taxonomy-mobile-break">consistent</span> everywhere.</h2>
+          <p>
+            Define descriptors once. Keep labels aligned across projects. Tixyo understands that an
+            issue has one type, but can touch many components.
+          </p>
+          <div class="taxonomy-actions">
+            <code>tixyo descriptors view --diff</code>
+            <code>tixyo descriptors apply</code>
+          </div>
+        </div>
+        <div class="descriptor-board" aria-label="Descriptor examples">
+          <div class="descriptor-column">
+            <header><span class="descriptor-dot blue"></span>Type <small>choose one</small></header>
+            <span>Bug</span><span>Feature</span><span>Maintenance</span>
+          </div>
+          <div class="descriptor-column raised">
+            <header><span class="descriptor-dot yellow"></span>Component <small>choose many</small></header>
+            <span>Source Code</span><span>Build</span><span>Unit Tests</span><span>Documentation</span>
+          </div>
+          <div class="descriptor-column">
+            <header><span class="descriptor-dot coral"></span>Signals <small>independent</small></header>
+            <span>Security</span><span>Needs info</span><span>Reproduction</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="install section-shell" id="install">
+        <div class="install-card">
+          <div class="install-copy">
+            <div class="eyebrow light"><span></span> Open source · Python 3.11+</div>
+            <h2>Give your issue queue<br />a calmer operating system.</h2>
+            <p>Install Tixyo, connect a repository, and preview your first triage decision.</p>
+          </div>
+          <div class="install-action">
+            <div class="copy-command">
+              <span>$</span><code>pip install tixyo</code>
+              <button type="button" data-copy="pip install tixyo" aria-label="Copy install command">Copy</button>
+            </div>
+            <div class="install-links">
+              <a href="https://pypi.org/project/tixyo/">View on PyPI ↗</a>
+              <a href="https://github.com/Bojan-Ivanovski/tixyo">Star on GitHub ↗</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="faq section-shell" id="faq">
+        <div class="section-heading">
+          <div class="eyebrow"><span></span> Frequently asked</div>
+          <h2>What teams ask<br />before they automate.</h2>
+          <p>Short answers about how Tixyo approaches GitHub issue classification and routing.</p>
+        </div>
+        <div class="faq-list">
+          <details>
+            <summary>What is AI issue triage?</summary>
+            <p>AI issue triage analyzes an issue’s title, description, and discussion to recommend structured metadata such as type, priority, size, components, risk signals, and ownership.</p>
+          </details>
+          <details>
+            <summary>Does Tixyo change GitHub issues automatically?</summary>
+            <p>Not by default. Tixyo starts in dry-run mode, displays each recommendation and confidence score, and only writes eligible changes when you explicitly use <code>--apply</code>.</p>
+          </details>
+          <details>
+            <summary>Can an issue have multiple components?</summary>
+            <p>Yes. Tixyo treats component classification as multi-select, so one issue can affect areas such as source code, builds, tests, and documentation at the same time.</p>
+          </details>
+          <details>
+            <summary>How do I install the Tixyo CLI?</summary>
+            <p>Install it from PyPI with <code>pip install tixyo</code>, provide a GitHub token and repository, then run <code>tixyo triage ISSUE_NUMBER</code> to preview a decision.</p>
+          </details>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer section-shell">
+      <a class="brand" href="#top"><span class="brand-mark">T</span><span>Tixyo</span></a>
+      <p>Confidence-gated issue triage for engineering teams.</p>
+      <div><a href="https://github.com/Bojan-Ivanovski/tixyo">GitHub</a><a href="https://pypi.org/project/tixyo/">PyPI</a><span>MIT</span></div>
+    </footer>
+    <script src="./script.js"></script>
+  </body>
+</html>
